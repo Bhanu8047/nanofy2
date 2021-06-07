@@ -1,2 +1,2 @@
 # nanofy2
-url shortner application
+* URL shortner web application.
