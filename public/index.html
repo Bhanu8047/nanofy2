@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=egde">
+    <title>nanofy: Shorten your urls</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css" type="text/css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="heading--main">nanofy</h1>
+            <h6 class="heading--sub">shorten your urls</h6>
+        </header>
+        <main class="main">
+
+            <div class="error">
+                <p id="error"></p>
+            </div>
+            <form class="form" autocomplete="off" id="urlForm">
+                <div class="form--group">
+                    <input type="url" name="url" class="form--input" id="url" placeholder="Url" required>
+                    <label for="url" class="form--label">Url</label>
+                </div>
+                <div class="form--group">
+                    <input type="text" name="keyword" class="form--input" id="keyword" placeholder="Slug">
+                    <label for="keyword" class="form--label">Slug</label>
+                </div>
+                <div class="form--group">
+                    <button class="btn btn--green center">nanofy</button>
+                </div>
+            </form>
+            <div class="copy--url" id="copy-url">
+                <input type="text" class="form--input" id="shortUrl" placeholder="Your Url">
+                <label class="form--label" for="shortUrl">Your Url</label>
+                <button class="btn btn--green center" id="getUrl">copy</button>
+            </div>
+        </main>
+        <footer class="footer">
+            <div class="footer--logo-box">
+                <img src="img/polymer.png" alt="logo" class="footer--logo">
+            </div>
+            <div class="footer--content">
+                <nav class="footer--nav">
+                    <a href="#" class="footer--link">Contact</a>
+                    <a href="#" class="footer--link">About</a>
+                    <a href="#" class="footer--link">Privacy</a>
+                    <a href="#" class="footer--link">Terms</a>
+                </nav>
+                <div class="footer--copyright">
+                    <p>
+                        Powered by <a href="#" class="footer--link">Code Reigment</a>. Copyright &copy; by Code Regiment.
+                    </p>
+                </div> 
+            </div>
+        </footer>
+    </div>
+   
+    <!-- dev version -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> -->
+    <!-- prod version -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/vue"></script> -->
+    <script src="./js/index.js"></script>
+</body>
+</html>

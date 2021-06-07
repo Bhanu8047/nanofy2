@@ -14,7 +14,7 @@ module.exports.addUrl = async(req, res, next) => {
             success: true,
             resCode: 201,
             _message: 'successfully nanofied your url.',
-            url: url
+            url: url.slug
         })
     } catch (error) {
         next(error)
@@ -22,20 +22,11 @@ module.exports.addUrl = async(req, res, next) => {
 }
 
 module.exports.getSlug = async(req, res, next) => {
-    const { slug } = req.body
+    const { slug } = req.params
     try {
         const url = await Url.findOne({slug: slug})
-        if(!url) return res.status(404).json({
-            success: false,
-            resCode: 404,
-            _message: 'query not fulfilled.'
-        })
-        res.status(200).json({
-            success: true,
-            resCode: 200,
-            _message: 'query fulfilled.',
-            url: url.url
-        })
+        if(!url) return res.render('404')
+        res.redirect(url.url)
     } catch (error) {
         next(error)
     }

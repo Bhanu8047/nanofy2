@@ -12,10 +12,10 @@ const db = require('./db/mongo')
 require('dotenv').config()
 
 const app = express()
-const corsOptions = {
-    origin: '*',
-}
-app.use(cors(corsOptions))
+// const corsOptions = {
+//     origin: '*',
+// }
+app.use(cors())
 app.use(helmet())
 app.use(morgan('tiny'))
 app.use(express.urlencoded({extended: true}))
