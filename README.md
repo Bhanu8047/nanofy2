@@ -1,2 +1,3 @@
 # nanofy2
-url shortner application
+* URL shortner web application.
+* API: https://nanofy-od692.ondigitalocean.app/
